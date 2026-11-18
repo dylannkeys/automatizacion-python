@@ -87,7 +87,7 @@ python -m automatizacion organizar ~/Downloads --aplicar   # lo hace
 
 ## Ejecutar
 
-Requisitos: Python 3.10 o superior.
+Requisitos: Python 3.11 o superior.
 
 ```bash
 git clone https://github.com/dylannkeys/automatizacion-python.git
@@ -134,7 +134,7 @@ pip install pytest ruff
 pytest
 ```
 
-39 tests cubren cada normalizador con casos válidos e inválidos, la detección de duplicados, el contenido del Excel, la generación de correos (incluidas las plantillas con errores), el organizador con archivos temporales y el pipeline completo. El [CI](.github/workflows/ci.yml) los ejecuta con Python 3.10 y 3.12, junto con `ruff` para el estilo.
+39 tests cubren cada normalizador con casos válidos e inválidos, la detección de duplicados, el contenido del Excel, la generación de correos (incluidas las plantillas con errores), el organizador con archivos temporales y el pipeline completo. El [CI](.github/workflows/ci.yml) los ejecuta con Python 3.11 y 3.12, junto con `ruff` para el estilo.
 
 ## Decisiones de diseño
 
