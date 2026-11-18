@@ -1,0 +1,31 @@
+# Ejecuta el proceso completo cada lunes y deja los resultados como artefacto descargable.
+# También se puede lanzar a mano desde la pestaña Actions > Reporte semanal > Run workflow.
+name: Reporte semanal
+
+on:
+  schedule:
+    - cron: "0 13 * * 1" # lunes a las 13:00 UTC (08:00 en Ecuador)
+  workflow_dispatch:
+
+jobs:
+  reporte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Limpiar datos, generar reporte y preparar correos
+        run: python -m automatizacion pipeline --salida salida
+
+      - name: Guardar resultados
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-postulaciones
+          path: salida/
+          retention-days: 30

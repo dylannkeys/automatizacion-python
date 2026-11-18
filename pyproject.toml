@@ -1,0 +1,20 @@
+[project]
+name = "automatizacion-python"
+version = "1.0.0"
+description = "Scripts de automatización de procesos en Python: limpieza de datos, reportes en Excel, correos personalizados y organización de archivos."
+requires-python = ">=3.10"
+dependencies = ["openpyxl>=3.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

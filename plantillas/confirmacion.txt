@@ -1,0 +1,14 @@
+Asunto: Hemos recibido tu postulación, $nombre
+
+Hola, $nombre:
+
+Gracias por postular al programa de $carrera. Hemos recibido tus datos correctamente el $fecha.
+
+Nuestro equipo revisará tu perfil y te escribiremos en un plazo de 5 días hábiles con los siguientes pasos.
+
+Si alguno de tus datos de contacto no es correcto, responde a este correo:
+- Teléfono registrado: $telefono
+- Ciudad: $ciudad
+
+Saludos cordiales,
+Equipo de Selección
